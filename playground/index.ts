@@ -2,22 +2,26 @@
  * This is only for local test
  */
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {ApplicationRef, NgModule} from '@angular/core';
 import { Component } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import {InvalidTooltipModule} from "ng-invalid-tooltip";
 
-import { SampleModule }  from 'ng-invalid-tooltip';
 
 @Component({
   selector: 'app',
-  template: `<sample-component></sample-component>`
+  template: `<input type="text" [invalidTooltip]="[{error: 'required', message: 'haha'}">`
 })
-class AppComponent {}
+class AppComponent {
+  constructor(private appRef: ApplicationRef) {
+    console.log(this.appRef);
+  }
+}
 
 @NgModule({
   bootstrap: [ AppComponent ],
   declarations: [ AppComponent ],
-  imports: [ BrowserModule, SampleModule ]
+  imports: [ BrowserModule, InvalidTooltipModule ]
 })
 class AppModule {}
 

@@ -1,6 +1,6 @@
 {
   "name": "ng-invalid-tooltip",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/username/repo"
@@ -14,7 +14,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/username/repo/issues"
+    "url": "https://github.com/abdulrahmanalhamali/ng-invalid-tooltip/issues"
   },
   "main": "ng-invalid-tooltip.umd.js",
   "module": "ng-invalid-tooltip.js",
