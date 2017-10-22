@@ -1,6 +1,7 @@
 # ng-invalid-tooltip
 
 This library provides you with a simple directive that you can add to your Angular for controls, that will show a warning tooltip whenever they contain invalid values. 
+
 Features:
 
 * Very easy to use: All you need to do is supply the directive with what you want to show for each kind of error
@@ -49,7 +50,7 @@ Once the library is imported, you can use the invalidTooltip directive as follow
 ```xml
 <input type="text" required pattern="[A-Za-z0-9]+" [(ngModel)]="someModel" [invalidTooltip]="{required: 'This field is required', pattern: 'Only alphanumerical characters are allowed'}">
 ```
-This will cause the text "This field is required" to show in the tooltip whenever the field is not provided, and the text "Only alphanumerical characters are allowed" to show when the pattern is violated.\
+This will cause the text "This field is required" to show in the tooltip whenever the field is not provided, and the text "Only alphanumerical characters are allowed" to show when the pattern is violated.
 
 Note that the tooltip will not work if the input field does not have an Angular form control attached to it. That is, it must have ngModel, formControlName, or any other alternative from Angular form control directives.
 ## License
