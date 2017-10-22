@@ -1,5 +1,12 @@
 # ng-invalid-tooltip
 
+This library provides you with a simple directive that you can add to your Angular for controls, that will show a warning tooltip whenever they contain invalid values. 
+Features:
+
+* Very easy to use: All you need to do is supply the directive with what you want to show for each kind of error
+* Customized specifically for invalid values: It automatically detects whenever the form control becomes invalid, and shows the appropriate text depending on the error.
+* Floats on top of everything: The tooltip is actually attached to the root component of the app, so it is not affected by the context in which the form control is placed
+
 ## Installation
 
 To install this library, run:
@@ -8,15 +15,9 @@ To install this library, run:
 $ npm install ng-invalid-tooltip --save
 ```
 
-## Consuming your library
+## Using the library
 
-Once you have published your library to npm, you can import your library in any Angular application by running:
-
-```bash
-$ npm install ng-invalid-tooltip
-```
-
-and then from your Angular `AppModule`:
+After installing the library, go to your module and import **InvalidTooltipModule**. For example:
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -24,8 +25,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-// Import your library
-import { SampleModule } from 'ng-invalid-tooltip';
+// Import the library
+import { InvalidTooltipModule } from 'ng-invalid-tooltip';
 
 @NgModule({
   declarations: [
@@ -34,8 +35,8 @@ import { SampleModule } from 'ng-invalid-tooltip';
   imports: [
     BrowserModule,
 
-    // Specify your library as an import
-    LibraryModule
+    // Specify the library as an import
+    InvalidTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -43,30 +44,14 @@ import { SampleModule } from 'ng-invalid-tooltip';
 export class AppModule { }
 ```
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
+Once the library is imported, you can use the invalidTooltip directive as follows:
 
 ```xml
-<!-- You can now use your library component in app.component.html -->
-<h1>
-  {{title}}
-</h1>
-<sampleComponent></sampleComponent>
+<input type="text" required pattern="[A-Za-z0-9]+" [(ngModel)]="someModel" [invalidTooltip]="{required: 'This field is required', pattern: 'Only alphanumerical characters are allowed'}">
 ```
+This will cause the text "This field is required" to show in the tooltip whenever the field is not provided, and the text "Only alphanumerical characters are allowed" to show when the pattern is violated.\
 
-## Development
-
-To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
-
-```bash
-$ npm run build
-```
-
-To lint all `*.ts` files:
-
-```bash
-$ npm run lint
-```
-
+Note that the tooltip will not work if the input field does not have an Angular form control attached to it. That is, it must have ngModel, formControlName, or any other alternative from Angular form control directives.
 ## License
 
 MIT © [AbdulRahmanAlHamali](mailto:a.alhamali@saugo360.com)
