@@ -7,6 +7,7 @@ Features:
 * Very easy to use: All you need to do is supply the directive with what you want to show for each kind of error
 * Customized specifically for invalid values: It automatically detects whenever the form control becomes invalid, and shows the appropriate text depending on the error.
 * Floats on top of everything: The tooltip is actually attached to the root component of the app, so it is not affected by the context in which the form control is placed
+* Does not clutter: Only shows when the component is focused and not covered by other components
 
 ## Installation
 
