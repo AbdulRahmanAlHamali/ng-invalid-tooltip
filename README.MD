@@ -8,7 +8,8 @@ Features:
 * Customized specifically for invalid values: It automatically detects whenever the form control becomes invalid, and shows the appropriate text depending on the error.
 * Floats on top of everything: The tooltip is actually attached to the root component of the app, so it is not affected by the context in which the form control is placed
 * Does not clutter: Only shows when the component is focused and not covered by other components
-
+## Demo
+https://plnkr.co/edit/tpl:AvJOMERrnz94ekVua0u5?p=preview
 ## Installation
 
 To install this library, run:
