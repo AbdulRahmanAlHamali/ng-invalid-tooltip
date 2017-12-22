@@ -9,7 +9,7 @@ Features:
 * Floats on top of everything: The tooltip is actually attached to the root component of the app, so it is not affected by the context in which the form control is placed
 * Does not clutter: Only shows when the component is focused and not covered by other components
 ## Demo
-https://plnkr.co/edit/tpl:AvJOMERrnz94ekVua0u5?p=preview
+https://plnkr.co/edit/lGEQZPDdSbyU5nPPdfsV?p=preview
 ## Installation
 
 To install this library, run:
