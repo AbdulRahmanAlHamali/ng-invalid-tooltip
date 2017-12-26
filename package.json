@@ -1,6 +1,6 @@
 {
   "name": "ng-invalid-tooltip",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "scripts": {
     "build": "gulp build",
     "build:watch": "gulp",
@@ -16,18 +16,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/username/repo"
+    "url": "https://github.com/AbdulRahmanAlHamali/ng-invalid-tooltip"
   },
   "author": {
     "name": "AbdulRahmanAlHamali",
     "email": "a.alhamali@saugo360.com"
   },
   "keywords": [
-    "angular"
+    "angular",
+    "tooltip",
+    "invalid"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/username/repo/issues"
+    "url": "https://github.com/AbdulRahmanAlHamali/ng-invalid-tooltip/issues"
   },
   "devDependencies": {
     "@angular/common": "^4.0.0",
